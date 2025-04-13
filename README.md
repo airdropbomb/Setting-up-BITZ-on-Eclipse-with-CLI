@@ -26,6 +26,10 @@ https://eclipsescan.xyz/token/64mggk2nXg6vHC1qCdsZdEFzd5QGN4id54Vbho4PswCF
 
  ## Getting Started 
 
+ ```
+screen -S eclipse
+```
+
  ### Prepare Environment 
 ![image](https://github.com/user-attachments/assets/35093e13-2ab7-44a2-9732-ee50a3ba94b6)
 
