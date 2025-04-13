@@ -177,5 +177,7 @@ bitz account
 
 # DONE! 
 
-HAHAHAHAHAH!
-[TWITTER](https://x.com/mztacat) 
+Join My Channel
+[TWITTER](https://x.com/airdropbombnode)
+[TELEGRAM](https://t.me/airdropbombnode)
+[YOUTUBE](https://youtube.com/@airdropbombnode)
