@@ -204,7 +204,11 @@ which avm က ဘာမှ မပြသင့်ပါဘူး
 which anchor က /usr/local/bin/anchor လို့ ပြရမှာပါ
 
 
+## version ပြန်စစ်ပါ
 
+```
+anchor --version
+```
 
 
 ### After Installation, reload terminal 
