@@ -105,6 +105,65 @@ sudo cp ./target/release/anchor /usr/local/bin/
 anchor --version
 ```
 
+## Not found ပဲပြနေသေးတယ်ဆိုရင် /root/.avm/bin/anchor-0.31.0 ကို သုံးနေတာကိုပါ။ ဒါက သင်အရင်ထည့်သွင်းထားတဲ့ Anchor CLI (AVM ကနေ ထည့်ထားတဲ့ binary) ကို ဆွဲသုံးနေတာဖြစ်ပြီး သင်အသစ် build လုပ်ထားတဲ့ binary (/usr/local/bin/anchor) ကို မသုံးပါဘူး။ အာ့တော့ သုံးအောင်လုပ်ရပါမယ်
+
+AVM ရဲ့ binary ကို ဖယ်ရှားပါ:
+```
+sudo rm -rf /root/.avm
+```
+
+PATH ထဲက AVM ကို ဖယ်ရှားပါ:
+
+```
+cat ~/.bashrc
+```
+
+အကယ်၍ /root/.avm/bin နဲ့ ပတ်သက်တဲ့ line တွေ့ရင် (ဥပမာ export PATH="$HOME/.avm/bin:$PATH") အဲဒါကို ဖယ်ရှားပါ။
+
+```
+nano ~/.bashrc
+```
+
+ဖယ်ရှားပြီးရင် save လုပ်ပြီး:
+
+```
+source ~/.bashrc
+```
+
+Build လုပ်ထားတဲ့ Anchor Binary ကို သုံးဖို့ အောက်ကအဆင့်တွေ လုပ်မယ်
+
+Binary ရှိမရှိ စစ်ဆေးပါ:
+
+```
+ls -l /usr/local/bin/anchor
+```
+
+အကယ်၍ binary ရှိရင် ဆက်လုပ်ပါ။ မရှိရင် သင် build လုပ်ထားတဲ့ binary ကို ပြန်ကူးထည့်ပါ:
+
+```
+sudo cp ~/anchor/target/release/anchor /usr/local/bin/
+```
+
+PATH ကို စစ်ဆေးပါ:
+$PATH ထဲမှာ /usr/local/bin ပါမပါ စစ်ပါ:
+
+```
+echo $PATH.
+```
+
+/usr/local/bin ပါရမယ်။ မပါရင် ထည့်ပါ:
+
+```
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+## version ပြန်စစ်ပါ
+
+```
+anchor --version
+```
+
 ### After Installation, reload terminal 
 ```
 source $HOME/.bashrc
