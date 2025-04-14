@@ -99,6 +99,11 @@ Build ပြီးရင် binary ကို ./target/release/anchor မှာ �
 sudo cp ./target/release/anchor /usr/local/bin/
 ```
 
+## version ပြန်စစ်ပါ
+
+```
+anchor --version
+```
 
 ### After Installation, reload terminal 
 ```
