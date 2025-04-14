@@ -178,6 +178,35 @@ avm command က ဘယ်ကလာလဲ စစ်ပါ:
 which avm
 ```
 
+## /root/.cargo/bin/avm ဆိုရင် AVM ကို Cargo ထဲက ဖယ်ရှားပါ
+
+```
+rm -f /root/.cargo/bin/avm
+```
+
+AVM နဲ့ ဆက်စပ်တဲ့ Anchor Binary တွေ ရှိမရှိ စစ်ပါ:
+/root/.cargo/bin/ ထဲမှာ anchor binary ရှိမရှိ စစ်ဆေးပြီး ရှိရင် ဖယ်ရှားပါ:
+
+```
+ls /root/.cargo/bin/
+rm -f /root/.cargo/bin/anchor
+```
+
+AVM ဖယ်ရှားပြီးမှန်း စစ်ဆေးပါ:
+
+```
+which avm
+which anchor
+```
+
+which avm က ဘာမှ မပြသင့်ပါဘူး
+
+which anchor က /usr/local/bin/anchor လို့ ပြရမှာပါ
+
+
+
+
+
 ### After Installation, reload terminal 
 ```
 source $HOME/.bashrc
