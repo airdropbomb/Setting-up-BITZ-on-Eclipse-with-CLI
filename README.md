@@ -164,6 +164,20 @@ source ~/.bashrc
 anchor --version
 ```
 
+## Not found တော့မပေါ်တော့ဘူး ဒါပေမယ့် avm not set လို့ပြနေရင် အောက်အဆင့်တွေဆက်လုပ်ပါ
+
+```
+sudo rm -rf /root/.avm
+sudo rm -rf /root/.cache/avm
+sudo rm -rf /root/.local/share/avm
+```
+
+avm command က ဘယ်ကလာလဲ စစ်ပါ:
+
+```
+which avm
+```
+
 ### After Installation, reload terminal 
 ```
 source $HOME/.bashrc
