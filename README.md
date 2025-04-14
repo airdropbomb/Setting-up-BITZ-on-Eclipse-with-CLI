@@ -79,6 +79,26 @@ curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev 
 ```
 ![image](https://github.com/user-attachments/assets/ddd9d674-bb44-422e-94d4-581d22517028)
 
+## GLIBC version ပြသာနာ များသောအားဖစ်တက်ပါတယ် not found ဆိုတဲ့ပြသာနာပါ
+/root/.avm/bin/anchor-0.31.0: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /root/.avm/bin/anchor-0.31.0)
+Anchor CLI (version 0.31.0) ထည့်သွင်းပြီးတဲ့အခါ အလုပ်မလုပ်တဲ့ ပြဿနာက GLIBC (GNU C Library) ဗားရှင်းနဲ့ ဆိုင်ပါတယ်။ Error message အရ Anchor CLI က GLIBC 2.38 နဲ့ 2.39 လိုအပ်ပေမယ့် သင့်စက်မှာ ဒီဗားရှင်းတွေ မရှိဘူးလို့ ပြောနေပါတယ်။ ဒါဟာ သင့် operating system ရဲ့ GLIBC ဗားရှင်းက နောက်ကျနေတာကြောင့်ပါ။
+
+Anchor CLI ကို Source ကနေ Build လုပ်ပါ:
+Anchor CLI ရဲ့ source code ကို clone လုပ်ပြီး build လုပ်ပါ:
+```
+git clone https://github.com/coral-xyz/anchor.git
+cd anchor
+git checkout v0.31.0
+cargo build --release
+```
+
+Build လုပ်ထားတဲ့ Binary ကို သုံးပါ:
+Build ပြီးရင် binary ကို ./target/release/anchor မှာ တွေ့ပါလိမ့်မယ်။
+
+```
+sudo cp ./target/release/anchor /usr/local/bin/
+```
+
 
 ### After Installation, reload terminal 
 ```
