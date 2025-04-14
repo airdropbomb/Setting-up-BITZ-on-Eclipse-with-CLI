@@ -36,6 +36,7 @@ sudo apt install curl nano build-essential -y
 
 
 ## Build Screen from Source 
+screen install လုပ်ပီးသားဆိုမလိုဘူးကျော်
 
 ```
 sudo apt install autoconf make gcc libutempter-dev libpam0g-dev libncurses5-dev -y
@@ -54,8 +55,11 @@ screen --version
 ![image](https://github.com/user-attachments/assets/e8201671-09bb-41bd-8187-c8d3a48b49a8)
 
 
-### Install RUST 
-
+### Install RUST (ကိုယ့်စက်ထဲမှာသွင်းပီးသားလားစစ် သွင်းပီးသားဆိုကျော်)
+```
+rustc --version
+```
+## မသွင်းရသေးရင်သွင်း
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -83,7 +87,7 @@ source $HOME/.bashrc
 ![image](https://github.com/user-attachments/assets/d5e230be-c10f-4ec7-98c3-feaac3c734c0)
 
 
-### Check Version 
+### Check Version (ဒီ command ကို run လို့ version မပြရင် vps ကို reboot လုပ်)
 ```
 solana --version
 ```
@@ -98,7 +102,7 @@ reboot
 ### This connects CLI to the Eclipse mainnet.
 
 ```
-solana config set --url https://mainnetbeta-rpc.eclipse.xyz/ 
+solana config set --url https://eclipse.helius-rpc.com/
 ```
 ![image](https://github.com/user-attachments/assets/5c80aeb7-b800-4274-97f5-88ace151868c)
 
@@ -140,7 +144,7 @@ screen -S bitzminer
 bitz collect
 ```
 
-### Using Multiple core 
+### Using Multiple core (ဒါက ကိုယ်က cpu core ဘယ်လောက်သုံးမှာလည်း သတ်မှတ်ပေးရမယ် ကိုယ့်မှာ 8 core ဆို 8 core လုံးအပြည့်မသုံးရဘူးနော် အကုန် shut down ကျကုန်မယ်)
 ```
 bitz collect --cores 4
 ```
