@@ -210,6 +210,35 @@ which anchor က /usr/local/bin/anchor လို့ ပြရမှာပါ
 anchor --version
 ```
 
+## -bash: /root/.cargo/bin/anchor: No such file or directory လို့ပြရင် အောက်မှာဆက်လုပ်ပါ
+
+```
+echo $PATH
+```
+## ~/.bashrc ကို ပြင်ဆင်ပါ:
+```
+nano ~/.bashrc
+```
+
+~/.bashrc ရဲ့ အောက်ဆုံးမှာ PATH ကို ဒီလိုပြင်ထည့်ပါ:
+
+```
+export PATH="/usr/local/bin:/root/protoc/bin:/root/gaianet/bin:/root/.cargo/bin:/root/.wasmedge/bin:/root/.foundry/bin:/root/.soundness/bin:/root/.risc0/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/multipleforlinux"
+```
+
+Save လုပ်ပြီး:
+
+```
+source ~/.bashrc
+```
+
+## version ပြန်စစ်ပါ
+
+```
+anchor --version
+```
+anchor-cli 0.31.0 လို့ပြရင် ရပါပီ တော်တော်ရှုပ်ပါတယ်နော်အာစိတို့
+
 
 ### After Installation, reload terminal 
 ```
